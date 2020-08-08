@@ -90,7 +90,7 @@ static glyph_t* font_bitmap_custom_load_glyph(font_t* f, wchar_t c) {
   ENSURE(ret == size);
 
   if (c != ' ') {
-    size = g->w * g->h;
+    size = index->size;
     data = TKMEM_ALLOC(size);
 
     if (data != NULL) {
