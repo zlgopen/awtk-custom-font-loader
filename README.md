@@ -16,10 +16,34 @@ cd awtk; scons; cd -
 ```
 
 2. 获取 awtk-custom-font-loader 并编译
+
 ```
 git clone https://github.com/zlgopen/awtk-custom-font-loader.git
-cd awtk-custom-font-loader; scons
+cd awtk-custom-font-loader
 ```
+
+* 生成资源
+
+```
+python ./scripts/update_res.py all
+```
+
+> 或者通过 designer 生成资源
+
+
+* 编译PC版本
+
+```
+scons
+```
+
+* 编译LINUX FB版本
+
+```
+scons LINUX_FB=true
+```
+
+> 完整编译选项请参考[编译选项](https://github.com/zlgopen/awtk-widget-generator/blob/master/docs/build_options.md)
 
 ## 生成字体数据
 
